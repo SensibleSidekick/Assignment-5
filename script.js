@@ -12,8 +12,6 @@ window.addEventListener("load", function() {
         // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
     });
 
-    const button = document.getElementById("formSubmit");
-
     const form = document.getElementById('launchForm');
     const list = document.getElementById('faultyItems');
 
