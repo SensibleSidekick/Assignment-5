@@ -28,13 +28,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
  };
  
  function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-    
-    const pilotStatus = document.getElementById('pilotStatus');
-    const copilotStatus = document.getElementById('copilotStatus');
-    const cargoStatus = document.getElementById('cargoStatus');
-    const fuelStatus = document.getElementById('fuelStatus');
-    const launchStatus = document.getElementById('launchStatus');
-   
+
         if (validateInput(pilot.value) === 'Empty' || validateInput(pilot.value) === "Is a Number") {
             window.alert("Please enter a valid name.");
         } else if (validateInput(copilot.value) === 'Empty' || validateInput(copilot.value) === "Is a Number") {
@@ -45,6 +39,13 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
             window.alert("Please enter a valid amount of cargo.");
         }
     
+            
+    const pilotStatus = document.getElementById('pilotStatus');
+    const copilotStatus = document.getElementById('copilotStatus');
+    const cargoStatus = document.getElementById('cargoStatus');
+    const fuelStatus = document.getElementById('fuelStatus');
+    const launchStatus = document.getElementById('launchStatus');
+   
 
     if (validateInput(pilot) === 'Not a Number') {
         pilotStatus.innerHTML = `Pilot ${pilot.value} is ready for launch.`;
