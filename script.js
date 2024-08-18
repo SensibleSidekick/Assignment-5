@@ -23,7 +23,7 @@ window.addEventListener("load", function() {
     listedPlanetsResponse.then(function (result) {
         listedPlanets = result;
         
-        console.log("Listed Planets:", result);
+        console.log("Listed Planets:", listedPlanets);
 
     }).then(function () {
 
