@@ -14,19 +14,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                                         <li>Number of Moons: ${moons}</li>
                                     </ol>
                                     <img src="${imageUrl}"/>`;
-    
-    // Here is the HTML formatting for our mission target div.
-    /*
-                 <h2>Mission Destination</h2>
-                 <ol>
-                     <li>Name: </li>
-                     <li>Diameter: </li>
-                     <li>Star: ${star}</li>
-                     <li>Distance from Earth: </li>
-                     <li>Number of Moons: </li>
-                 </ol>
-                 <img src="">
-    */
+
  }
  
  function validateInput(testInput) {
@@ -43,9 +31,9 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         let launchReady = false;
 
         if (validateInput(pilot.value) === 'Empty' || validateInput(pilot.value) === "Is a Number") {
-            alert("Please enter a valid name.");
+            alert("Please enter a valid name for the pilot.");
         } else if (validateInput(copilot.value) === 'Empty' || validateInput(copilot.value) === "Is a Number") {
-           alert("Please enter a valid name.");
+           alert("Please enter a valid name for the co-pilot.");
         } else if (validateInput(fuelLevel.value) === 'Empty' || validateInput(fuelLevel.value) === 'Not a Number') {
            alert("Please enter a valid amount of fuel.");
         } else if (validateInput(cargoLevel.value) === 'Empty' || validateInput(cargoLevel.value) === 'Not a Number') {
@@ -77,7 +65,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         launchStatus.style.color = "red";
     } else if (launchReady && fuelLevel.value >= 10000) {
         fuelReady = true;
-        fuelStatus.innerHTML = "Fuel level high enough for launch"
+        fuelStatus.innerHTML = "Fuel level high enough for launch";
 
     }
 
@@ -87,11 +75,11 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         launchStatus.style.color = "red";
     } else if (launchReady && cargoLevel.value <= 10000){
         cargoReady = true;
-        cargoStatus.innerHTML = "Cargo mass low enough for launch"
+        cargoStatus.innerHTML = "Cargo mass low enough for launch";
     }
 
     if (fuelReady && cargoReady){
-        launchStatus.innerHTML = "Shuttle is Ready for Launch"
+        launchStatus.innerHTML = "Shuttle is Ready for Launch";
         launchStatus.style.color = "green";
     }
 
@@ -100,7 +88,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
  async function myFetch() {
      let planetsReturned;
  
-     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json")
+     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json");
      let result = await planetsReturned.json();
      return result;  
  }
