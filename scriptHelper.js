@@ -100,10 +100,10 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
  async function myFetch() {
      let planetsReturned;
  
-     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
-       let planets = response.json();
-        return planets;
-     });  
+     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json")
+     let result = await planetsReturned.json();
+     console.log(result);
+     return result;  
  }
  
  function pickPlanet(planets) {
