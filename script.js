@@ -7,10 +7,10 @@ window.addEventListener("load", function() {
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        const pilot = document.querySelector("[name=pilotName]");
-        const copilot = document.querySelector("[name=copilotName]");
-        const fuelLevel = document.querySelector("[name=fuelLevel]");
-        const cargoLevel = document.querySelector("[name=cargoMass]");
+        const pilot = document.querySelector('[name=pilotName]');
+        const copilot = document.querySelector('[name=copilotName]');
+        const fuelLevel = document.querySelector('[name=fuelLevel]');
+        const cargoLevel = document.querySelector('[name=cargoMass]');
 
      formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
     });
