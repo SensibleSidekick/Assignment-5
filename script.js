@@ -4,6 +4,8 @@ window.addEventListener("load", function() {
     const form = document.getElementById('launchForm');
     const list = document.getElementById('faultyItems');
 
+    list.style.visibility="hidden";
+
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
